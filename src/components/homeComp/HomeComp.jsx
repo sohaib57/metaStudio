@@ -18,9 +18,14 @@ import { useNavigate } from 'react-router-dom';
 const HomeComp = () => {
   const nav = useNavigate();
   return (
-    <Stack>
-    <Stack width={'100%'} bgColor={'#001529'} pb={'33px'}>
-      <Stack direction={'row'} px={10} pt={10} spacing={10}>
+    <Stack width={'100%'} bgColor={'#282c4b'} pb={'33px'}>
+      <Stack
+        direction={'row'}
+        px={10}
+        pt={10}
+        spacing={10}
+        display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
+      >
         <Stack>
           <Img src={Logo} width={'100px'} position={'relative'} top={'-35'} />
         </Stack>
@@ -74,9 +79,17 @@ const HomeComp = () => {
         <SignInModal />
       </Stack>
 
-      <Stack width={'100%'} direction={{ base: 'column', md: 'row' }} px={20}>
+      <Stack
+        width={'100%'}
+        direction={{ base: 'column', md: 'row' }}
+        px={{ base: 10, md: 20 }}
+      >
         <Stack width={{ base: '100%', md: '50%' }}>
-          <Heading color={'white'} fontSize={'7xl'} fontWeight={'600'}>
+          <Heading
+            color={'white'}
+            fontSize={{ base: '2xl', md: '5xl', lg: '7xl' }}
+            fontWeight={'600'}
+          >
             Find Your Own Unique digital rarity
           </Heading>
           <Text
@@ -133,7 +146,7 @@ const HomeComp = () => {
             <Img
               src={NFT2}
               borderRadius="full"
-              boxSize="250px"
+              boxSize={{base:'100px',xs:'150px', md:'150px', lg:'250px'}}
               p={3}
               border={'1px solid #205375'}
             />
@@ -142,22 +155,20 @@ const HomeComp = () => {
             <Img
               src={NFT1}
               borderRadius="full"
-              boxSize="210px"
+              boxSize={{base:'100px',md:'150px',lg:'210px'}}
               p={3}
               border={'1px solid #205375'}
             />
             <Img
               src={NFT1}
               borderRadius="full"
-              boxSize="210px"
+              boxSize={{base:'100px',md:'150px',lg:'210px'}}
               p={3}
               border={'1px solid #205375'}
             />
           </Stack>
         </Stack>
       </Stack>
-    </Stack>
-    <NotableDrops/>
     </Stack>
   );
 };
