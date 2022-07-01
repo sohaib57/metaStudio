@@ -13,7 +13,7 @@ import {
 import Wallet from '../objects/Wallet';
 
 
-const Header = () => {
+const EditorHeader = () => {
   const [canvas] = useContext(ContextCanvas)
 
   const deleteObject = () => {
@@ -101,4 +101,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default EditorHeader;

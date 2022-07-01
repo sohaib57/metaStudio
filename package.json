@@ -33,6 +33,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "react-select": "^5.4.0",
     "styled-components": "^5.3.5",
     "use-font-face-observer": "^1.2.1",
     "web-vitals": "^0.2.2",
