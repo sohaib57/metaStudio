@@ -1,8 +1,10 @@
-import { Button, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, Text, useDisclosure, VStack } from '@chakra-ui/react'
+import { Button, IconButton, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, Text, Tooltip, useDisclosure, VStack } from '@chakra-ui/react'
 import meta from '../../assests/images/metamask.svg'
 import coinbase from '../../assests/images/coinbase.svg'
 import walletconnect from '../../assests/images/walletconnect.png'
+
 import { useAddress, useDisconnect, useMetamask, useCoinbaseWallet, useWalletConnect } from "@thirdweb-dev/react";
+import { RiWallet3Line } from 'react-icons/ri';
 
 
 
@@ -15,14 +17,15 @@ const Wallet = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-            <Button
+            <IconButton
                 onClick={onOpen}
-                bgColor={'#1890ff'}
+                as={'button'} variant={'ghost'}
                 color={'white'}
-                _hover={{ bgColor: '', color: 'white' }}
-            >
-                Connect Wallet
-            </Button>
+                _hover={{ color: 'white' }}
+                _focus={{}}
+                _active={{}}
+                icon={<RiWallet3Line size={'1.5rem'} />}
+            />
 
             <Modal isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
