@@ -4,6 +4,7 @@ import Build from '../../components/homeComp/Build'
 import HomeComp from '../../components/homeComp/HomeComp'
 import NotableDrops from '../../components/homeComp/NotableDrops'
 import TopCollection from '../../components/homeComp/TopCollection'
+import TrendingNfts from '../../components/homeComp/TrendingNfts'
 
 const HomeScreen = () => {
     return (
@@ -15,6 +16,8 @@ const HomeScreen = () => {
             <TopCollection/>
 
             <Build/>
+
+            <TrendingNfts/>
 
             <Footer/>
 

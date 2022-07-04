@@ -11,6 +11,13 @@ import {
   Spacer,
 } from '@chakra-ui/react';
 import Eth from '../../assests/images/eth.svg';
+import gif1 from '../../assests/images/original.gif';
+import gif2 from '../../assests/images/original1.gif';
+import gif3 from '../../assests/images/original3.png';
+import gif4 from '../../assests/images/original2.jpeg';
+import gif5 from '../../assests/images/original4.gif';
+import gif6 from '../../assests/images/original5.gif';
+import gif7 from '../../assests/images/original7.gif';
 
 const TopCollection = () => {
   return (
@@ -115,7 +122,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif1}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -172,7 +179,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif2}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -229,7 +236,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif3}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -290,7 +297,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif4}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -347,7 +354,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif7}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -404,7 +411,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif6}
                 />
               </Stack>
               <Stack lineHeight={1}>
@@ -461,7 +468,7 @@ const TopCollection = () => {
                 <Avatar
                   size={'md'}
                   name="Dan Abrahmov"
-                  src="https://openseauserdata.com/files/061eb8949cff84d0be850fc9a566e4fe.png"
+                  src={gif5}
                 />
               </Stack>
               <Stack lineHeight={1}>
