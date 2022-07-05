@@ -6,7 +6,10 @@ import Editor from '../../layout/Editor';
 import ExploreScreen from '../../screens/explore/ExploreScreen';
 import SingleCollectionScreen from '../../screens/explore/SingleCollectionScreen';
 import HomeScreen from '../../screens/home/HomeScreen';
-import Blockchain from '../../components/upload/Blockchain';
+import Blockchain from '../../screens/upload/Blockchain';
+import Type from '../../screens/upload/Type';
+import Upload from '../../screens/upload/Upload';
+import SingleCollectionDetail from '../../screens/explore/SingleCollectionDetail';
 
 const MainRoutes = () => {
   return (
@@ -20,7 +23,13 @@ const MainRoutes = () => {
           path="/explore/collection/user1"
           element={<SingleCollectionScreen />}
         />
-        <Route path="/create/start" element={<Blockchain />} />
+        <Route
+          path="/explore/collection/user1/details"
+          element={<SingleCollectionDetail />}
+        />
+        <Route path="/create/blockchain" element={<Blockchain />} />
+        <Route path="/create/start" element={<Type />} />
+        <Route path="/create/upload" element={<Upload />} />
       </Routes>
     </>
   );
