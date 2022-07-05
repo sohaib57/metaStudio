@@ -3,12 +3,13 @@ import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { BsFilter } from 'react-icons/bs'
 import { MdAddCircleOutline } from 'react-icons/md'
+import CollectionSider from '../collectionSider/CollectionSider'
 
 const CollectionHeader = () => {
     return (
         <>
 
-            <Stack px={'6'} direction={'row'} justify={{ md: 'end' }} >
+            <Stack direction={'row'} align={{ md: 'end' }} justify={{ base: 'space-between' }}>
                 <Stack display={{ base: 'inherit', md: 'none' }}>
                     <Menu >
                         <MenuButton
@@ -18,29 +19,19 @@ const CollectionHeader = () => {
                             variant='outline'
                             _focus={{}}
                             _active={{}}
+                            borderRadius={'lg'} bgColor={'white'} boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
                         />
                         <MenuList>
-                            <MenuItem icon={<MdAddCircleOutline />} >
-                                New Tab
-                            </MenuItem>
-                            <MenuItem icon={<MdAddCircleOutline />} >
-                                New Window
-                            </MenuItem>
-                            <MenuItem icon={<MdAddCircleOutline />} >
-                                Open Closed Tab
-                            </MenuItem>
-                            <MenuItem icon={<MdAddCircleOutline />} >
-                                Open File...
-                            </MenuItem>
+                            <CollectionSider />
                         </MenuList>
                     </Menu>
                 </Stack>
-                <Stack w={{base:'full', md: '50%' }} direction={'row'}>
+                <Stack direction={'row'}>
                     <InputGroup>
                         <InputLeftElement pointerEvents={'none'} children={<BiSearch />} />
-                        <Input placeholder='Search by name' />
+                        <Input placeholder='Search by name' borderRadius={'lg'} bgColor={'white'} boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'} />
                     </InputGroup>
-                    <Select defaultValue={'pricelowtohigh'}>
+                    <Select defaultValue={'pricelowtohigh'} color={'#718096'} borderRadius={'lg'} bgColor={'white'} boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}>
                         <option value='pricelowtohigh'>Price Low to High</option>
                         <option value='pricehightolow'>Price High to Low</option>
                         <option value='recentlylisted'>Recently Listed</option>

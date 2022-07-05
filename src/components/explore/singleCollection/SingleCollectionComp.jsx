@@ -1,21 +1,22 @@
-import { Avatar, Button, Divider, Heading, Img, SimpleGrid, Stack, Tag, Text, chakra } from '@chakra-ui/react'
-import React from 'react'
+import { Avatar, Button, Divider, Heading, Img, SimpleGrid, Stack, Text } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import ProfileHeader from '../../header/ProfileHeader'
 import Trending1 from '../../../assests/images/trending1.jpg'
-import Trending2 from '../../../assests/images/trending2.png'
-import Trending3 from '../../../assests/images/trending3.png'
 import { IoIosStarOutline, IoMdHeartEmpty } from 'react-icons/io'
-import { FaFire } from 'react-icons/fa'
 import '../TabSection.css'
 import CollectionHeader from '../collectionHeader/CollectionHeader'
 import CollectionSider from '../collectionSider/CollectionSider'
 import SingleCollectionCard from './SingleCollectionCard'
+import CoverImage from '../../ui/CoverImage'
+import ProfileImage from '../../ui/ProfileImage'
 
 const arts = 3
 const collections = 1
 const total_value = 30
 const likes = 32
 const SingleCollectionComp = () => {
+    const [showMore, setshowmore] = useState()
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     return (
         <>
             <Stack minH={'100vh'} bgColor={'#F2F2F3'}>
@@ -23,13 +24,12 @@ const SingleCollectionComp = () => {
                 <ProfileHeader />
                 <Stack h={'100%'} m={'0 !Important'}>
                     <Stack minH={'100%'} w={'full'} pb={{ base: '4', md: '0' }} >
-                        <Stack w={'full'} h={'40vh'} bgImage={Trending1} bgPos={'center'} bgRepeat={'no-repeat'} bgSize={'cover'} />
+                        <CoverImage img={Trending1}/>
                         {/* User Details */}
                         <Stack direction={{ base: 'column', md: 'row' }} spacing={'10'} px={'6'} pb={'8'} >
                             {/* User Image  */}
                             <Stack align={'center'}>
-                                <Img src={Trending1} w={'52'} border={'2px solid white'} borderRadius={'lg'} marginTop={'-20'} />
-
+                                <ProfileImage img = {Trending1}/>
                             </Stack>
                             {/* User Detail */}
                             <Stack align={{ base: 'center', md: 'initial' }}>
@@ -56,8 +56,19 @@ const SingleCollectionComp = () => {
                             </Stack>
                         </Stack>
                     </Stack>
+                    <Stack direction={{ base: 'column', md: 'row' }} px={'6'} justify={'space-between'}>
+                        <Stack w={{ md: '50%' }}>
+                            <h6>
+                                {showMore ? text : `${text.substring(0, 100)}.....`}
+                            </h6>
+                            <Button w={{ md: 'fit-content' }} _focus={{}} _active={{}} borderRadius={'lg'} bgColor={'white'} boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'} onClick={() => setshowmore(!showMore)}>
+                                {showMore ? "Show Less" : 'Show More'}
+                            </Button>
+                        </Stack>
 
-                    <CollectionHeader />
+
+                        <CollectionHeader />
+                    </Stack>
 
 
 

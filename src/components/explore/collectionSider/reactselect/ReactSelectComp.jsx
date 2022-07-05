@@ -1,7 +1,6 @@
 import { Select, Stack } from '@chakra-ui/react'
-import React from "react";
+import React, { useState } from "react";
 // import Select from 'react-select'
-import './ReactselectCSS.css'
 
 const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -18,15 +17,23 @@ const options = [
 ]
 
 const ReactSelectComp = () => {
+    const [option, setOption] = useState({});
+    const handleChange = (e) => {
+        setOption(options[+e.target.value]);
+    };
+    console.log(option);
     return (
         <>
-            <Stack>
-                {/* <Select >
-                    {options?.map((c) => (
-                        <option value={c}>{c}</option>
+            <Stack color={'black'}>
+                <Select onChange={() => handleChange}>
+                    {options.map((option, index) => (
+                        <option key={index} value={index} >
+                            {option.label}
+                        </option>
                     ))}
-                </Select> */}
+                </Select>
             </Stack>
+
         </>
     )
 

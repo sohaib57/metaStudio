@@ -1,11 +1,9 @@
-import { Avatar, border, Grid, GridItem, Heading, Img, SimpleGrid, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text, chakra, Button } from '@chakra-ui/react'
+import { SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
 import './TabSection.css'
-import { IoMdHeartEmpty } from 'react-icons/io'
 import CollectionCard from './CollectionCard'
 
 
-const arts = 3
 const TabSection = () => {
     return (
         <>

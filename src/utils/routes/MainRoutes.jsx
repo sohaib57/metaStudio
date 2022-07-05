@@ -6,6 +6,8 @@ import Editor from '../../layout/Editor'
 import ExploreScreen from '../../screens/explore/ExploreScreen'
 import SingleCollectionScreen from '../../screens/explore/SingleCollectionScreen'
 import HomeScreen from '../../screens/home/HomeScreen'
+import ProfileScreen from '../../screens/profile/ProfileScreen'
+import ProfileSettingsScreen from '../../screens/profile/ProfileSettingsScreen'
 
 const MainRoutes = () => {
     return (
@@ -16,6 +18,8 @@ const MainRoutes = () => {
                 <Route path='/editor' element={<Editor />} />
                 <Route path='/explore' element={<ExploreScreen />} />
                 <Route path='/explore/collection/user1' element={<SingleCollectionScreen />} />
+                <Route path='/account' element={<ProfileScreen />} />
+                <Route path='/settings' element={<ProfileSettingsScreen />} />
             </Routes>
 
         </>
