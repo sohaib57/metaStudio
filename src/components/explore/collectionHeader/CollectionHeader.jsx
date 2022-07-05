@@ -9,7 +9,7 @@ const CollectionHeader = () => {
     return (
         <>
 
-            <Stack direction={'row'} align={{ md: 'end' }} justify={{ base: 'space-between' }}>
+            <Stack direction={'row'} align={{ md: 'end' }} justify={{ base: 'space-between', md: 'end' }}>
                 <Stack display={{ base: 'inherit', md: 'none' }}>
                     <Menu >
                         <MenuButton

@@ -1,4 +1,4 @@
-import { Button, Divider, Heading, Select, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
+import { Button, Divider, Heading, MenuButton, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import React from 'react'
 import ProfileHeader from '../../header/ProfileHeader'
 import Trending1 from '../../../assests/images/trending1.jpg'
@@ -7,6 +7,10 @@ import CoverImage from '../../ui/CoverImage'
 import ProfileImage from '../../ui/ProfileImage'
 import { IoMdShareAlt } from 'react-icons/io'
 import NFTListing from './NFTListing'
+import { useNavigate } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { AiOutlineLink } from 'react-icons/ai'
+import CollectionHeader from '../../explore/collectionHeader/CollectionHeader'
 
 
 const name = 'Asad Sheikh'
@@ -14,6 +18,7 @@ const text = "0xA8752e8773bCaF04381B69DB560C40760BB3A45f"
 const Following = 1
 const Follower = 1
 const ProfileComp = () => {
+    const nav = useNavigate()
     return (
         <>
             <Stack minH={'100vh'} bgColor={'#F2F2F3'}>
@@ -49,18 +54,86 @@ const ProfileComp = () => {
                                                 borderRadius={'lg'}
                                                 bgColor={'white'}
                                                 boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                onClick={() => nav('/settings')}
                                             >
                                                 Edit Profile
                                             </Button>
-                                            <Button w={{ md: 'fit-content' }}
-                                                _focus={{}}
-                                                _active={{}}
-                                                borderRadius={'lg'}
-                                                bgColor={'white'}
-                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
-                                            >
-                                                <IoMdShareAlt />
-                                            </Button>
+                                            {/* Share Content */}
+                                            <Popover>
+                                                <PopoverTrigger>
+                                                    <Button
+                                                        w={{ md: 'fit-content' }}
+                                                        _focus={{}}
+                                                        _active={{}}
+                                                        borderRadius={'lg'}
+                                                        bgColor={'white'}
+                                                        boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                    >
+                                                        <IoMdShareAlt />
+                                                    </Button>
+                                                </PopoverTrigger>
+                                                <PopoverContent _focus={{}} _active={{}}>
+                                                    <PopoverArrow />
+                                                    <PopoverCloseButton />
+                                                    <PopoverHeader fontWeight={'bold'}>Share to your Socials</PopoverHeader>
+                                                    <PopoverBody>
+                                                        <Stack direction={'row'} justify={'center'} py={'4'}>
+                                                            {/* Social Buttons */}
+                                                            <Button
+                                                                w={{ md: 'fit-content' }}
+                                                                _focus={{}}
+                                                                _active={{}}
+                                                                borderRadius={'xl'}
+                                                                bgColor={'white'}
+                                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                            >
+                                                                <FaFacebookF />
+                                                            </Button>
+                                                            <Button
+                                                                w={{ md: 'fit-content' }}
+                                                                _focus={{}}
+                                                                _active={{}}
+                                                                borderRadius={'xl'}
+                                                                bgColor={'white'}
+                                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                            >
+                                                                <FaInstagram />
+                                                            </Button>
+                                                            <Button
+                                                                w={{ md: 'fit-content' }}
+                                                                _focus={{}}
+                                                                _active={{}}
+                                                                borderRadius={'xl'}
+                                                                bgColor={'white'}
+                                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                            >
+                                                                <FaTwitter />
+                                                            </Button>
+                                                            <Button
+                                                                w={{ md: 'fit-content' }}
+                                                                _focus={{}}
+                                                                _active={{}}
+                                                                borderRadius={'xl'}
+
+                                                                bgColor={'white'}
+                                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                            >
+                                                                <FaWhatsapp />
+                                                            </Button>
+                                                            <Button
+                                                                w={{ md: 'fit-content' }}
+                                                                _focus={{}}
+                                                                _active={{}}
+                                                                borderRadius={'xl'}
+                                                                bgColor={'white'}
+                                                                boxShadow={'0px 0px 2px #ccc, 0px 0px 9px 0px #ccc'}
+                                                            >
+                                                                <AiOutlineLink />
+                                                            </Button>
+                                                        </Stack>
+                                                    </PopoverBody>
+                                                </PopoverContent>
+                                            </Popover>
                                         </Stack>
                                     </Stack>
                                     {/* Follow and Accounts */}
@@ -132,6 +205,7 @@ const ProfileComp = () => {
 
                                 <TabPanels>
                                     <TabPanel>
+                                        <CollectionHeader />
                                         <NFTListing />
                                     </TabPanel>
                                     <TabPanel>
@@ -143,9 +217,9 @@ const ProfileComp = () => {
                                 </TabPanels>
                             </Tabs>
                         </Stack>
-                    </Stack>
-                </Stack>
-            </Stack>
+                    </Stack >
+                </Stack >
+            </Stack >
         </>
     )
 }
