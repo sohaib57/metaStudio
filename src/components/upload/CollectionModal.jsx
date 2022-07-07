@@ -14,6 +14,7 @@ import {
   HStack,
   Input,
   Textarea,
+  Avatar,
 } from '@chakra-ui/react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
@@ -37,7 +38,11 @@ const CollectionModal = () => {
     console.log('source: ', source);
     return source.map(photo => {
       return (
-        <Img key={photo} src={photo} width={'200px'} borderRadius={'full'} />
+        <>
+        <Stack >
+        <Avatar size='xl' name='Christian Nwamba' key={photo} src={photo} />
+        </Stack>
+        </>
       );
     });
   };

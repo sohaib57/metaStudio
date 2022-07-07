@@ -15,11 +15,10 @@ import {
   BsTriangle,
   FaRegCircle,
   ImFont,
-  VscSymbolColor
-
+  VscSymbolColor,
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
-import Pen from "../objects/drawings/Pen"
+import Pen from '../objects/drawings/Pen';
 import FabricCanvas from './FabricCanvas';
 import FabricRectangle from '../objects/Shape/FabricRectangle';
 import FabricTextBox from '../objects/Shape/FabricTextBox';
@@ -29,9 +28,9 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
 import ColorPicker from '../ui/ColorPicker';
 import ChangeFonts from '../ui/ChangeFonts';
-import Chart from '../Element/Chart'
+import Chart from '../Element/Chart';
 import ChangeFontSize from '../ui/ChangeFontSize';
-import ContextCanvas from '../../context/ContextCanvas'
+import ContextCanvas from '../../context/ContextCanvas';
 
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -45,7 +44,7 @@ function getItem(label, key, icon, children) {
 const MenuItemGroup = Menu.ItemGroup;
 
 const LayerAndAssets = () => {
-  const [canvas, keyMenu, setKeyMenu] = useContext(ContextCanvas)
+  const [canvas, keyMenu, setKeyMenu] = useContext(ContextCanvas);
   const [leftCollapse, setleftCollapse] = useState(true);
   const [rightCollapse, setRightCollapse] = useState(true);
   const [collapsed, setcollapsed] = useState(false);
@@ -53,15 +52,18 @@ const LayerAndAssets = () => {
     setcollapsed(collapsed);
   };
 
-
-
   return (
     <Layout
       style={{
         marginTop: '-0.5px',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} style={{ overflow: 'auto' }}>
+      <Sider
+        collapsible
+        collapsed={collapsed}
+        onCollapse={onCollapse}
+        style={{ overflow: 'auto' }}
+      >
         <div className="logo" />
         <Menu theme="dark" mode="inline">
           <SubMenu
@@ -107,7 +109,6 @@ const LayerAndAssets = () => {
               </span>
             }
           >
-
             <Menu.Item key="3">
               <Icon component={SiIconify} />
               <Image />
@@ -244,7 +245,6 @@ const LayerAndAssets = () => {
               </button>
             </Menu.Item>
           </SubMenu>
-
         </Menu>
       </Sider>
       <Layout
@@ -278,7 +278,6 @@ const LayerAndAssets = () => {
             }
           >
             <ColorPicker />
-
           </SubMenu>
           <SubMenu
             theme="light"
@@ -290,15 +289,13 @@ const LayerAndAssets = () => {
               </span>
             }
           >
-
             <ChangeFonts />
             <br />
             <ChangeFontSize />
           </SubMenu>
         </Menu>
       </Sider>
-
-    </Layout >
+    </Layout>
   );
 };
 
