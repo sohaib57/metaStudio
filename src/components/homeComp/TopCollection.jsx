@@ -7,7 +7,6 @@ import {
   HStack,
   Avatar,
   Img,
-  AvatarBadge,
   Spacer,
 } from '@chakra-ui/react';
 import Eth from '../../assests/images/eth.svg';
@@ -18,8 +17,10 @@ import gif4 from '../../assests/images/original2.jpeg';
 import gif5 from '../../assests/images/original4.gif';
 import gif6 from '../../assests/images/original5.gif';
 import gif7 from '../../assests/images/original7.gif';
+import { useNavigate } from 'react-router-dom'
 
 const TopCollection = () => {
+  const nav = useNavigate()
   return (
     <Stack width={'100%'} py={5} bgColor={'#f2f2f3'}>
       <Stack alignItems={'center'}>
@@ -45,6 +46,7 @@ const TopCollection = () => {
         <Stack direction={'column'} width={{ base: '100%', xl: '50%' }}>
           <Stack gap={2}>
             <Stack
+            cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -53,6 +55,7 @@ const TopCollection = () => {
                 bgColor: 'white',
                 rounded: 'md',
               }}
+              onClick={() => nav('/explore/collection/user1')}
             >
               <Stack direction={'row'} alignItems={'center'} gap={1}>
                 <Text
@@ -102,6 +105,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -159,6 +164,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -216,6 +223,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -277,6 +286,8 @@ const TopCollection = () => {
         <Stack direction={'column'} width={{ base: '100%', xl: '50%' }}>
           <Stack gap={2}>
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -334,6 +345,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -391,6 +404,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -448,6 +463,8 @@ const TopCollection = () => {
             </Stack>
             <Divider borderColor={'gray'} />
             <Stack
+             onClick={() => nav('/explore/collection/user1')}
+             cursor={'pointer'}
               direction={'row'}
               px={{ base: 0, md: 20, lg: 4 }}
               py={'4'}
@@ -506,8 +523,10 @@ const TopCollection = () => {
           </Stack>
         </Stack>
       </Stack>
+
       <Stack pt={2} alignItems={'center'}>
         <Button
+          onClick={() => nav('/explore')}
           bgColor={'transparent'}
           borderRadius={'none'}
           border={'1px solid #001529'}

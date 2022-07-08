@@ -18,7 +18,7 @@ const NotableDrops = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 2000,
     slidesToShow: 6,
     slidesToScroll: 1,

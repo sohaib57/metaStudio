@@ -14,7 +14,7 @@ const TrendingNfts = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 4000,
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -33,17 +33,19 @@ const TrendingNfts = () => {
         </Text>
         <Divider borderColor={'#001529'} width={'10%'} />
       </Stack>
+      <Stack>
       <Slider {...settings}>
-        <CollectionCard />
+        <CollectionCard  />
 
-        <CollectionCard />
+        <CollectionCard  />
 
-        <CollectionCard />
+        <CollectionCard  />
 
-        <CollectionCard />
+        <CollectionCard  />
 
-        <CollectionCard />
+        <CollectionCard  />
       </Slider>
+      </Stack>
     </Stack>
   );
 };
