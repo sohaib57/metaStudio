@@ -61,6 +61,7 @@ const LayerAndAssets = () => {
         marginTop: '-0.5px',
       }}
     >
+      {/* Left Sider */}
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} style={{ overflow: 'auto' }}>
         <div className="logo" />
         <Menu theme="dark" mode="inline">
@@ -247,6 +248,7 @@ const LayerAndAssets = () => {
 
         </Menu>
       </Sider>
+      {/* Canvas Area */}
       <Layout
         style={{
           overflow: 'auto',
@@ -255,6 +257,7 @@ const LayerAndAssets = () => {
       >
         <FabricCanvas />
       </Layout>
+      {/* Right Sider */}
       <Sider
         style={{
           overflowY: 'auto',

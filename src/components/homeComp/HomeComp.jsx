@@ -8,11 +8,6 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
-import Logo from '../../assests/images/logo.png';
-import NFT1 from '../../assests/images/1.jpg';
-import NFT2 from '../../assests/images/2.jpg';
-import SignInModal from './SignInModal';
-import NotableDrops from './NotableDrops';
 import { useNavigate } from 'react-router-dom';
 import gif1 from '../../assests/images/original.gif';
 import gif2 from '../../assests/images/original4.gif';
@@ -82,7 +77,7 @@ const HomeComp = () => {
               Explore
             </Button>
             <Button
-              onClick={() => nav('/editor')}
+              onClick={() => nav('/create/blockchain')}
               bgColor={'transparent'}
               borderRadius={'none'}
               border={'1px solid white'}

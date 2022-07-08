@@ -2,8 +2,10 @@ import React from 'react';
 import { Stack, Link, Img, Spacer } from '@chakra-ui/react';
 import Logo from '../../assests/images/logo.png';
 import SignInModal from '../homeComp/SignInModal';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPageHeader = () => {
+  const nav = useNavigate();
   return (
     <Stack
       direction={'row'}
@@ -13,7 +15,14 @@ const LandingPageHeader = () => {
       display={{ base: 'none', md: 'inherit', lg: 'inherit' }}
     >
       <Stack>
-        <Img src={Logo} width={'100px'} position={'relative'} top={'-35'} />
+        <Img
+          src={Logo}
+          cursor={'pointer'}
+          onClick={() => nav('/')}
+          width={'100px'}
+          position={'relative'}
+          top={'-35'}
+        />
       </Stack>
 
       <Link

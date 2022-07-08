@@ -29,6 +29,7 @@
     "react-color": "^2.19.3",
     "react-dom": "^18.1.0",
     "react-icons": "^3.0.0",
+    "react-read-more-read-less": "^1.0.7",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
