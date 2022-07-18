@@ -1,9 +1,7 @@
 import React from 'react';
 import {
   Stack,
-  Link,
   Img,
-  Spacer,
   Button,
   Heading,
   Text,

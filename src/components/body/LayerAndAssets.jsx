@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import {
@@ -11,7 +11,6 @@ import {
   GrYoutube,
   CgGhostCharacter,
   BiRectangle,
-  CgShapeCircle,
   BsTriangle,
   FaRegCircle,
   ImFont,
@@ -28,7 +27,6 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
 import ColorPicker from '../ui/ColorPicker';
 import ChangeFonts from '../ui/ChangeFonts';
-import Chart from '../Element/Chart';
 import ChangeFontSize from '../ui/ChangeFontSize';
 import ContextCanvas from '../../context/ContextCanvas';
 
@@ -96,6 +94,7 @@ const LayerAndAssets = () => {
               <Icon component={BiText} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 <FabricTextBox />
+                {console.log('hello')}
               </button>
             </Menu.Item>
           </SubMenu>

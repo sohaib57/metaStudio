@@ -11,6 +11,7 @@ import {
 } from 'react-icons/all'
 
 import Wallet from '../objects/Wallet';
+import Profile from '../objects/Profile';
 
 
 const EditorHeader = () => {
@@ -74,6 +75,7 @@ const EditorHeader = () => {
       >
         <Img src={logo} position={'absolute'} left={'1'} boxSize={'36'} />
         <Stack direction={'row'} className="Header-Buttons-Stack">
+          <Profile />
           <Wallet />
         </Stack>
       </Stack>

@@ -1,14 +1,17 @@
 import { Box, Stack } from '@chakra-ui/react'
 import React from 'react'
 import { MdEdit } from 'react-icons/md'
+import { useLocation } from 'react-router-dom'
 import './Image.css'
 
 const CoverImage = ({ img }) => {
+    var route = useLocation()
+    console.log(route)
     return (
         <>
             <Stack
                 position={'relative'}
-                className="container"
+                className={route.pathname === '/account' ? 'container' : ''}
                 h={'50vh'}
                 w={'100%'}
             >

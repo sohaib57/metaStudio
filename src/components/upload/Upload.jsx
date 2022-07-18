@@ -11,6 +11,7 @@ import {
   Select,
   Button,
   Avatar,
+  IconButton,
 } from '@chakra-ui/react';
 import LandingPageHeader from '../header/LandingPageHeader';
 import Ethereum from '../../assests/images/ETHEREUM.svg';
@@ -19,6 +20,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CollectionModal from './CollectionModal';
+import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom';
 
 const UploadComp = () => {
@@ -65,7 +67,6 @@ const UploadComp = () => {
 
       <Stack
         px={{ base: 10, md: 40 }}
-        direction={{ base: 'column', md: 'row' }}
       >
         <Stack>
           <Text fontSize={{ base: 'lg', sm: '4xl' }} color={'white'}>
@@ -76,13 +77,12 @@ const UploadComp = () => {
           </Text>
         </Stack>
         <Spacer />
-        <Stack>
-          <Button
+        <Stack w={'100%'}>
+          <Stack
             onClick={() => nav('/editor')}
             bgColor={'transparent'}
             borderRadius={'16px'}
             border={'1px solid #ffffff1a'}
-            width={'fit-content'}
             color={'white'}
             _hover={{
               border: '1px solid #ffffff33',
@@ -93,9 +93,15 @@ const UploadComp = () => {
               boxShadow: 'none',
             }}
             _active={{}}
+            minH={'28'}
+            align={'center'}
+            justify={'center'}
           >
-            Blank Page
-          </Button>
+            <AiOutlinePlusCircle size={'1.5rem'}/>
+            <Text>
+              Create New
+            </Text>
+          </Stack>
         </Stack>
       </Stack>
       <Stack px={{ base: 10, md: 40 }} width={'100%'} gap={2}>
@@ -143,7 +149,7 @@ const UploadComp = () => {
             <Input
               cursor={'pointer'}
               color={'white'}
-              width={{base:'100%',md:'30%'}}
+              width={{ base: '100%', md: '30%' }}
               border={'none'}
               _focus={{}}
               _active={{}}
@@ -256,7 +262,7 @@ const UploadComp = () => {
                   borderColor: '#ffffff33',
                 }}
                 _focus={{}}
-                width={{base:'100%',md:'30%'}}
+                width={{ base: '100%', md: '30%' }}
               >
                 <option
                   style={{

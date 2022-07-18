@@ -1,5 +1,5 @@
-import { Heading, Input, InputGroup, InputLeftElement, Stack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import React from 'react'
+import { Input, InputGroup, InputLeftElement, Stack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import React, { useEffect, useRef } from 'react'
 import Layout from '../../layout/Layout'
 import dashbg from '../../assests/images/dashbg.png'
 import { BiSearch } from 'react-icons/bi'
@@ -39,15 +39,20 @@ const DashboardComp = () => {
     { photo: sc8 },
     { photo: sc9 },
   ]
+  const inputReference = useRef(null);
+
+  useEffect(() => {
+    inputReference.current.focus();
+  }, []);
   return (
     <>
       <Layout>
         <Stack minH={'100vh'} bgColor={'#F2F2F3'} m={'0 !important'}>
           {/* Header Image */}
-          <Stack bgImage={dashbg} bgSize={'cover'} bgPos={'center'} h={'40vh'} align={'center'} justify={'center'} borderLeftRadius={'full'} borderRightRadius={'full'} mt={'3'}>
+          <Stack mx={'4'} bgImage={dashbg} bgSize={'cover'} bgPos={'center'} h={'40vh'} align={'center'} justify={'center'} borderLeftRadius={'full'} borderRightRadius={'full'} mt={'3'}>
             <InputGroup w={'60%'} bgColor={'rgba(255,255,255,0.5)'} borderRadius={'lg'} size={'lg'} >
               <InputLeftElement pointerEvents={'none'} children={<BiSearch />} />
-              <Input placeholder='Search ' _active={{}} _focus={{}} />
+              <Input placeholder='Search ' _active={{}} _focus={{}} ref={inputReference} />
             </InputGroup>
           </Stack>
           <Stack pt={'4'}>

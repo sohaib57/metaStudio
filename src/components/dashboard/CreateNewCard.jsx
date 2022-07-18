@@ -18,7 +18,7 @@ const CreateNewCard = () => {
                 justify={'center'}
                 cursor={'pointer'}
                 h={'52'}
-                onClick={() => nav('/editor')}
+                onClick={() => nav('/create/blockchain')}
             >
                 <AiOutlinePlusCircle size={'1.5em'} />
                 <Text>Create New</Text>

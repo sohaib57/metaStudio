@@ -71,7 +71,7 @@ const Build = () => {
           <Stack pt={2}>
             
             <Button
-              onClick={() => nav('/editor')}
+              onClick={() => nav('/dashboard')}
               bgColor={'transparent'}
               borderRadius={'none'}
               border={'1px solid white'}
