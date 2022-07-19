@@ -8,7 +8,7 @@ export function CanvasProvider({ children }) {
   const [canvas, setCanvas] = useState(null);
   const initCanvas = c => {
     setCanvas(c);
-    c.renderAll();
+    c.requestRenderAll();
   };
 
   return (

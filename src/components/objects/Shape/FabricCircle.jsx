@@ -7,9 +7,7 @@ const FabricCircle = () => {
   const [canvas] = useContext(ContextCanvas);
 
   function addCircle() {
-    if (!canvas) {
-      return
-    }
+  
     var circ = new fabric.Circle({
       left: 50,
       top: 50,

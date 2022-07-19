@@ -9,9 +9,7 @@ const FabricCanvas = () => {
 
 
   useLayoutEffect(() => {
-    return () => {
-      initCanvas(new fabric.Canvas('c'));
-    };
+    initCanvas(new fabric.Canvas('c'));
   }, []);
 
 
