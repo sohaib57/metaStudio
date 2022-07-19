@@ -23,6 +23,24 @@ const NotableDrops = () => {
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
+    responsive : [
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <Stack width={'100%'} py={10}>
@@ -43,6 +61,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif1} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -52,6 +71,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif2} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -61,6 +81,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif3} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -70,6 +91,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif4} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -80,6 +102,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif5} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -89,6 +112,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif6} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
@@ -98,6 +122,7 @@ const NotableDrops = () => {
           <Stack
             onClick={() => nav('/explore/collection/user1')}
             cursor={'pointer'}
+            px={2}
           >
             <Img src={gif7} width={'200px'} borderRadius={'full'} />
             <Text textAlign={'center'} color={'black'} fontWeight={'600'}>
