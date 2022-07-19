@@ -16,7 +16,7 @@ const CollectionCard = () => {
         bgColor={'rgba(255, 255, 255)'}
         boxShadow={'0 0 8px #ccc'}
         _hover={{ boxShadow: '0 0 20px #ccc' }}
-        w={{ base: '50vw', md: '35vw', lg: '30vw', '2xl': '18vw' }}
+        w={{ base: '70vw', md: '35vw', lg: '30vw', '2xl': '18vw' }}
         h={'50vh'}
         borderRadius={'xl'}
         p={'4'}

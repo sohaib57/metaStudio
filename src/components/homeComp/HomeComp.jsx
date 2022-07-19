@@ -48,7 +48,7 @@ const HomeComp = () => {
           <Text
             color={'white'}
             fontSize={'sm'}
-            width={{ base: '100%', md: '60%' }}
+            width={{ base: '100%', md: '75%' }}
             py={5}
           >
             Explore the best collections from hand-picked digital artists out

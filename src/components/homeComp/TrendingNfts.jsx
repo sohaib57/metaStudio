@@ -19,6 +19,24 @@ const TrendingNfts = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
+    responsive : [
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <Stack width={'100%'} p={10} mb={10}>
