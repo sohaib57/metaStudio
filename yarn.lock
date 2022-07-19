@@ -12086,7 +12086,6 @@ react-select@^5.4.0:
     prop-types "^15.6.0"
     react-transition-group "^4.3.0"
 
-<<<<<<< HEAD
 react-show-more-text@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/react-show-more-text/-/react-show-more-text-1.5.2.tgz#154cb955b731007e4f215e573e5169b8d17b23dd"
@@ -12095,8 +12094,6 @@ react-show-more-text@^1.5.2:
     "@babel/polyfill" "^7.12.1"
     prop-types "^15.7.2"
 
-=======
->>>>>>> ed9af82d5a6ee5e5cffb4794968edbbe778f50af
 react-slick@^0.29.0:
   version "0.29.0"
   resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.29.0.tgz#0bed5ea42bf75a23d40c0259b828ed27627b51bb"

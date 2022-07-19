@@ -5,13 +5,17 @@ import { Button } from '@chakra-ui/react';
 
 const FabricCircle = () => {
   const [canvas] = useContext(ContextCanvas);
+
   function addCircle() {
+    if (!canvas) {
+      return
+    }
     var circ = new fabric.Circle({
       left: 50,
       top: 50,
       fill: '',
       radius: 60,
-      stroke: 'green',                                                          
+      stroke: 'green',
       strokeWidth: 3,
       cornerColor: 'blue'
 
@@ -24,7 +28,8 @@ const FabricCircle = () => {
       <Button
         type="button"
         colorScheme="blue"
-        onClick={addCircle}
+        // onClick={addCircle}
+        onMouseDown={addCircle}
         variant={'ghost'}
         _hover={{}}
         _focus={{}}
