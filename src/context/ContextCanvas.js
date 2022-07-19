@@ -12,9 +12,11 @@ export function CanvasProvider({ children }) {
   };
 
   return (
+
     <ContextCanvas.Provider value={[canvas, initCanvas]}>
       {children}
     </ContextCanvas.Provider>
+
   );
 }
 
