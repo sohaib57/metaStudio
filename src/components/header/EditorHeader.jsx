@@ -2,17 +2,23 @@ import { useContext, useEffect } from 'react';
 import { Button, IconButton, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure, VStack } from '@chakra-ui/react';
 import logo from '../../assests/images/logo.png';
 import SaveFile from '../objects/SaveFile'
-import { AiFillDelete } from 'react-icons/all'
+import { AiFillDelete, FaObjectUngroup } from 'react-icons/all'
 import ContextCanvas from '../../context/ContextCanvas';
 import {
   FaAngleDoubleUp,
   FaAngleDoubleDown,
-  FaRegClone
+  FaRegClone,
+  FaObjectGroup,
+  BiAlignMiddle,
+  AiOutlineAlignRight,
+  AiOutlineAlignLeft,
+  AiOutlineAlignCenter
 } from 'react-icons/all'
 
 import Wallet from '../objects/Wallet';
 import Profile from '../objects/Profile';
 
+var align = ["left", "center", "right"];
 
 const EditorHeader = () => {
   const [canvas] = useContext(ContextCanvas)
@@ -61,6 +67,84 @@ const EditorHeader = () => {
 
     }
   }
+
+
+  const doGroup = () => {
+
+    var activeObj = canvas.getActiveObject();
+    var activegroup = activeObj.toGroup();
+    var objectsInGroup = activegroup.getObjects();
+    activegroup.clone(function (newgroup) {
+      canvas.remove(activegroup);
+      objectsInGroup.forEach(function (object) {
+        canvas.remove(object);
+      });
+      canvas.add(newgroup);
+    });
+
+  }
+
+  const doUnGroup = () => {
+    var activeObject = canvas.getActiveObject();
+    if (activeObject.type == "group") {
+      var items = activeObject._objects;
+      activeObject._restoreObjectsState();
+      canvas.remove(activeObject);
+      for (var i = 0; i < items.length; i++) {
+        canvas.add(items[i]);
+        canvas.item(canvas.size() - 1).hasControls = true;
+      }
+      canvas.renderAll();
+    }
+
+
+  }
+
+  const alignTextLeft = () => {
+
+    var text = canvas.getActiveObject();
+    changeAlign();
+
+    function changeAlign() {
+      var val = align[0];
+      text.set('textAlign', val);
+      canvas.setActiveObject(text);
+      canvas.renderAll();
+
+    }
+
+  }
+  const alignTextCenter = () => {
+
+    var text = canvas.getActiveObject();
+   
+    changeAlign();
+
+    function changeAlign() {
+      var val = align[1];
+      text.set('textAlign', val);
+      canvas.setActiveObject(text);
+      canvas.renderAll();
+
+    }
+
+  }
+  const alignTextRight = () => {
+
+    var text = canvas.getActiveObject();
+    changeAlign();
+
+    function changeAlign() {
+      var val = align[2];
+      text.set('textAlign', val);
+      canvas.setActiveObject(text);
+      canvas.renderAll();
+
+    }
+
+  }
+
+
   return (
     <>
       {/* Header */}
@@ -89,6 +173,12 @@ const EditorHeader = () => {
         justify={'flex-end'}
         pr={'2'}
       >
+
+        <IconButton onClick={alignTextLeft} variant={'ghost'} icon={< AiOutlineAlignLeft />} />
+        <IconButton onClick={alignTextCenter} variant={'ghost'} icon={< AiOutlineAlignCenter />} />
+        <IconButton onClick={alignTextRight} variant={'ghost'} icon={< AiOutlineAlignRight />} />
+        <IconButton onClick={doGroup} variant={'ghost'} icon={<FaObjectGroup />} />
+        <IconButton onClick={doUnGroup} variant={'ghost'} icon={<FaObjectUngroup />} />
         <IconButton onClick={cloneMultipleObject} variant={'ghost'} icon={<FaRegClone />} />
         <IconButton onClick={bringToTop} variant={'ghost'} icon={< FaAngleDoubleUp />} />
         <IconButton onClick={sendToBack} variant={'ghost'} icon={< FaAngleDoubleDown />} />
