@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
+import { Stack } from '@chakra-ui/react';
 import {
   SiIconify,
   BiText,
@@ -56,11 +57,12 @@ const LayerAndAssets = () => {
         marginTop: '-0.5px',
       }}
     >
+      <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider
         collapsible
         collapsed={collapsed}
         onCollapse={onCollapse}
-        style={{ overflow: 'auto' }}
+        style={{ overflow: 'auto', minHeight:'80vh'}}
       >
         <div className="logo" />
         <Menu theme="dark" mode="inline">
@@ -246,6 +248,8 @@ const LayerAndAssets = () => {
           </SubMenu>
         </Menu>
       </Sider>
+      </Stack>
+      
       {/* Canvas Area */}
       <Layout
         style={{
@@ -256,9 +260,11 @@ const LayerAndAssets = () => {
         <FabricCanvas />
       </Layout>
       {/* Right Sider */}
+      <Stack display={{ base: 'none', md: 'inherit', lg: 'inherit' }}>
       <Sider
         style={{
           overflowY: 'auto',
+          minHeight:'80vh',
           right: 0,
           position: 'relative',
         }}
@@ -296,6 +302,7 @@ const LayerAndAssets = () => {
           </SubMenu>
         </Menu>
       </Sider>
+      </Stack>
     </Layout>
   );
 };

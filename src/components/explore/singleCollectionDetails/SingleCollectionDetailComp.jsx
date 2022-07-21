@@ -86,7 +86,7 @@ const SingleCollectionDetailComp = () => {
                   borderRadius={'16px'}
                   py={5}
                   alignItems={'center'}
-                  width={{ base: '50%', md: '20%' }}
+                  width={{ base: '100%', md: '20%' }}
                   ml={2}
                 >
                   <Text color={'black'} fontSize={'xs'}>
@@ -103,7 +103,7 @@ const SingleCollectionDetailComp = () => {
                   borderRadius={'16px'}
                   py={5}
                   alignItems={'center'}
-                  width={{ base: '50%', md: '20%' }}
+                  width={{ base: '100%', md: '20%' }}
                 >
                   <Text color={'black'} fontSize={'xs'}>
                     eye
@@ -119,7 +119,7 @@ const SingleCollectionDetailComp = () => {
                   borderRadius={'16px'}
                   py={5}
                   alignItems={'center'}
-                  width={{ base: '50%', md: '20%' }}
+                  width={{ base: '100%', md: '20%' }}
                 >
                   <Text color={'black'} fontSize={'xs'}>
                     Nose
@@ -135,7 +135,7 @@ const SingleCollectionDetailComp = () => {
                   borderRadius={'16px'}
                   py={5}
                   alignItems={'center'}
-                  width={{ base: '50%', md: '20%' }}
+                  width={{ base: '100%', md: '20%' }}
                 >
                   <Text color={'black'} fontSize={'xs'}>
                     Shirt
@@ -151,7 +151,7 @@ const SingleCollectionDetailComp = () => {
                   borderRadius={'16px'}
                   py={5}
                   alignItems={'center'}
-                  width={{ base: '50%', md: '20%' }}
+                  width={{ base: '100%', md: '20%' }}
                 >
                   <Text color={'black'} fontSize={'xs'}>
                     Skin
