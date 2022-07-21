@@ -19,6 +19,7 @@ const FabricTextBox = () => {
     canvas.add(textbox);
     canvas.requestRenderAll();
   }
+
   return (
     <>
       <Button

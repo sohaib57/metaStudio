@@ -50,6 +50,8 @@ const LayerAndAssets = () => {
     setcollapsed(collapsed);
   };
 
+ 
+
   return (
     <Layout
       style={{
@@ -63,7 +65,7 @@ const LayerAndAssets = () => {
         style={{ overflow: 'auto' }}
       >
         <div className="logo" />
-        <Menu theme="dark" mode="inline">
+        <Menu theme="dark" mode="inline" >
           <SubMenu
             key="sub1"
             title={

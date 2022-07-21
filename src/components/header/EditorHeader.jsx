@@ -17,6 +17,7 @@ import {
 
 import Wallet from '../objects/Wallet';
 import Profile from '../objects/Profile';
+// import Actions from '../actions/Actions';
 
 var align = ["left", "center", "right"];
 
@@ -30,15 +31,12 @@ const EditorHeader = () => {
     });
     canvas.discardActiveObject().renderAll();
   }
-
-
   const bringToTop = () => {
     var canvasTop = canvas;
     var activeObj = canvasTop.getActiveObject();
     activeObj &&
       canvasTop.bringToFront(activeObj).discardActiveObject(activeObj).renderAll();
   }
-
   const sendToBack = () => {
     var canvasBack = canvas;
     var activeObj = canvasBack.getActiveObject();
@@ -47,8 +45,6 @@ const EditorHeader = () => {
 
 
   }
-
-
   const cloneMultipleObject = () => {
 
     var activeObjects = canvas.getActiveObjects();
@@ -67,8 +63,6 @@ const EditorHeader = () => {
 
     }
   }
-
-
   const doGroup = () => {
 
     var activeObj = canvas.getActiveObject();
@@ -83,7 +77,6 @@ const EditorHeader = () => {
     });
 
   }
-
   const doUnGroup = () => {
     var activeObject = canvas.getActiveObject();
     if (activeObject.type == "group") {
@@ -99,7 +92,6 @@ const EditorHeader = () => {
 
 
   }
-
   const alignTextLeft = () => {
 
     var text = canvas.getActiveObject();
@@ -117,7 +109,7 @@ const EditorHeader = () => {
   const alignTextCenter = () => {
 
     var text = canvas.getActiveObject();
-   
+
     changeAlign();
 
     function changeAlign() {
