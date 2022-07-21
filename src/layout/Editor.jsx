@@ -1,6 +1,7 @@
 import { Stack } from '@chakra-ui/react';
 import { useContext } from 'react';
 import LayerAndAssets from '../components/body/LayerAndAssets';
+import MobileSiderbar from '../components/body/MobileSiderbar';
 import EditorHeader from '../components/header/EditorHeader';
 import ContextCanvas from '../context/ContextCanvas';
 
@@ -21,6 +22,7 @@ const Editor = () => {
         <Stack margin={'0px !important'} height={'100%'} onKeyDown={keyDownHandler}>
           <EditorHeader />
           <LayerAndAssets />
+          <MobileSiderbar/>
         </Stack>
       </Stack>
     </>

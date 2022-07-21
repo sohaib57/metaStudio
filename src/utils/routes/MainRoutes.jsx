@@ -12,6 +12,7 @@ import Type from '../../screens/upload/Type';
 import Upload from '../../screens/upload/Upload';
 import SingleCollectionDetail from '../../screens/explore/SingleCollectionDetail';
 import DashboardScreen from '../../screens/dashboard/DashboardScreen'
+import ColorPicker from '../../components/ui/ColorPicker'
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
         <Route path='/' element={<HomeScreen />} />
         <Route path='/login' element={<Login />} />
         <Route path='/editor' element={<Editor />} />
+        <Route path='/colorpicker' element={<ColorPicker />} />
         <Route path='/explore' element={<ExploreScreen />} />
         <Route path='/explore/collection/user1' element={<SingleCollectionScreen />} />
         <Route path='/account' element={<ProfileScreen />} />

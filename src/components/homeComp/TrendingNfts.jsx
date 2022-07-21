@@ -21,6 +21,14 @@ const TrendingNfts = () => {
     arrows: false,
     responsive : [
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 425,
         settings: {
           slidesToShow: 1,
